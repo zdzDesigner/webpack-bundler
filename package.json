@@ -1,7 +1,7 @@
 {
-  "name": "api-configer",
+  "name": "webpack-bundler",
   "version": "0.1.0-alpha.0",
-  "description": "api static conifg",
+  "description": "webpack bundler flow and proxy-mock",
   "files": [
     "lib"
   ],
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zdzDesigner/api-configer.git"
+    "url": "git+https://github.com/zdzDesigner/webpack-bundler.git"
   },
   "keywords": [
     "api",
@@ -21,9 +21,9 @@
   "author": "zdzDesigner",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zdzDesigner/api-configer/issues"
+    "url": "https://github.com/zdzDesigner/webpack-bundler/issues"
   },
-  "homepage": "https://github.com/zdzDesigner/api-configer#readme",
+  "homepage": "https://github.com/zdzDesigner/webpack-bundler#readme",
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-plugin-import": "^1.8.0",
