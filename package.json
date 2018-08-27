@@ -1,13 +1,13 @@
 {
   "name": "webpack-bundler",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "webpack bundler flow and proxy-mock",
   "files": [
     "lib"
   ],
   "main": "null",
   "scripts": {
-    "test": "null"
+    "develop": "gulp"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,9 @@
     "url": "https://github.com/zdzDesigner/webpack-bundler/issues"
   },
   "homepage": "https://github.com/zdzDesigner/webpack-bundler#readme",
+  "peerDependencies": {
+    "webpack": "^3.0.0"
+  },
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-plugin-import": "^1.8.0",

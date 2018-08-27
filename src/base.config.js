@@ -2,10 +2,9 @@
  * @description webpack 配置
  * @author zdzDesigner
  */
-import webpack from 'webpack'
-import merge from 'webpack-merge'
-import path from 'path'
-// var path = require('path')
+var webpack = require('webpack')
+var merge = require('webpack-merge')
+var path = require('path')
 var CleanWebpackPlugin = require('clean-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -13,7 +12,7 @@ var InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 
 
-export default getConfig
+module.exports = getConfig
 
 function getConfig(conf, webpackExtend) {
 
@@ -89,7 +88,6 @@ function getConfig(conf, webpackExtend) {
             new webpack.optimize.CommonsChunkPlugin({
                 names: ['manifest'].reverse()
             }),
-
             new CopyWebpackPlugin([{
                 from:'src/app/view/assets/images',
                 to: 'images'

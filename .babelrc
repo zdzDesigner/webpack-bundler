@@ -2,10 +2,10 @@
     "presets": [
         ["env", {
           "targets": {
-            "node": "4.1.0"
+            "node": "6.1.0"
           },
           "debug": true
-        }], "stage-0"
+        }]
     ],
     "plugins": ["transform-runtime","transform-flow-strip-types",["import", { "libraryName": "webpack" }]],
     "ignore": ["node_modules"]

@@ -1,6 +1,6 @@
+const cwd = process.cwd()
 const childprocess = require('child_process')
-const webpackBase = require(process.cwd()+'/webpack.config.js')
-const _package = require(process.cwd()+'/package.json')
+const _package = require(cwd + '/package.json')
 const argv = require('./service/get-argv.js')
 const flowServer = require('./service/flow.js')
 const webpackServer = require('./service/webpack.js')
@@ -18,10 +18,18 @@ module.exports = exec
 
 
 function exec(config, webpackExtend){
+    let webpackBase;
+    try{
+        webpackBase = require(cwd + '/webpack.config.js');    
+    }catch(err){
+        webpackBase = {}
+    }
+    config = config || {}
+    config.proxy = config.proxy || {}
     let publicPath = _package.publicPath
-    let defaultPort = config.port 
-    let domain = (config.proxy && config.proxy.domain) || false
-    let recookie = config.proxy && config.proxy.recookie || false
+    let defaultPort = config.port  
+    let domain = config.proxy.domain || false
+    let recookie = config.proxy.recookie || false
     let {port, mock, isflow} = argv
     let flowProcess = null
     let proxyProcess = null
